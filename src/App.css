@@ -1,42 +1,85 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+thead {
+  background-color: #f2f2f2;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+th, td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: center;
+}
+
+/* Alternate row background color */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Responsive table styles */
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table tr {
+    margin-bottom: 10px;
+    display: block;
+    border-bottom: 2px solid #ddd;
+  }
+
+  table td {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+.filter-container {
+  display: flex;
+  /* justify-content: space-between; */
+  margin-bottom: 20px;
 }
 
-.card {
-  padding: 2em;
+.search-input {
+  flex: 1;
+  margin-right: 10px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  max-width: 150px;
 }
 
-.read-the-docs {
-  color: #888;
+.rows-dropdown {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
