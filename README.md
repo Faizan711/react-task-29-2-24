@@ -12,7 +12,7 @@ To run this application locally, follow these steps:
 
     bashCopy code
 
-    `git clone `
+    `git clone https://github.com/Faizan711/react-task-29-2-24.git`
 
 2.  Navigate to the project directory:
 
