@@ -57,10 +57,10 @@ For the additional challenge, the following feature was implemented:
 Problem-Solving
 ---------------
 
-During the development of this application, one of the challenges faced was related to filtering the employee data based on the search term. Initially, the search functionality was not working as expected, as it was case-sensitive and did not filter the data correctly.
+During the development of this application, one of the challenges I faced was that I was following the PDF and initialized a firebase app , but added the databaseURL after that, so two initialization were conflicting.
 
-To overcome this issue, I modified the filtering logic to convert both the search term and the employee data to lowercase before performing the comparison. This ensured that the search functionality is case-insensitive and filters the data accurately.
-
+To overcome this issue, I modified the initializeApp() function and put a check on it if there were more than one, to 
+take the first one of them, you can see it on firebase.js.
 Credits
 -------
 
