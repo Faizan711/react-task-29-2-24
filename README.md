@@ -59,8 +59,9 @@ Problem-Solving
 
 During the development of this application, one of the challenges I faced was that I was following the PDF and initialized a firebase app , but added the databaseURL after that, so two initialization were conflicting.
 
-To overcome this issue, I modified the initializeApp() function and put a check on it if there were more than one, to 
-take the first one of them, you can see it on firebase.js.
+*To overcome this issue, I modified the initializeApp() function and put a check on it if there were more than one, to 
+take the first one of them, you can see it on firebase.js.*
+
 Credits
 -------
 

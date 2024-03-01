@@ -10,12 +10,18 @@ function App() {
 //dropwdown for number of rows with 5 default
   const [rowsToShow, setRowsToShow] = useState(5);
 
+  //Loader
+  const [isLoading, setIsLoading] = useState(true);
+
 
   //to fetch data from employees node from database
   useEffect(() => {
     const dbRef = ref(db, 'employees');
     const handleData = snap => {
-      if (snap.val()) setEmployees(Object.values(snap.val()));
+      if (snap.val()) {
+        setEmployees(Object.values(snap.val()))
+        setIsLoading(false);
+      };
     }
 
     onValue(dbRef, handleData, {
@@ -61,26 +67,30 @@ function App() {
         </select>
 
       </div>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Position</th>
-            <th>Department</th>
-          </tr>
-        </thead>
-        <tbody>
-        {slicedEmployees.map((employee, index) => (
-            <tr key={index}>
-              <td>{employee.name}</td>
-              <td>{employee.age}</td>
-              <td>{employee.position}</td>
-              <td>{employee.department}</td>
+      {isLoading ? (
+        <div className="spinner"></div>
+      ) : (
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Position</th>
+              <th>Department</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {slicedEmployees.map((employee, index) => (
+              <tr key={index}>
+                <td>{employee.name}</td>
+                <td>{employee.age}</td>
+                <td>{employee.position}</td>
+                <td>{employee.department}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
     </>
   )
 }
