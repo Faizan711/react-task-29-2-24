@@ -50,9 +50,10 @@ Features
 Additional Challenge
 --------------------
 
-For the additional challenge, the following feature was implemented:
+For the additional challenge, the following features was implemented:
 
 -   Search Functionality: Added a search bar that allows users to filter employees by name, position, or department.
+-   Loader: Added a spinning loader on page load which is shown till data is fetched and displayed.
 
 Problem-Solving
 ---------------
