@@ -40,7 +40,7 @@ function App() {
 
   return (
     <>
-      <h1>React Assessment</h1>
+      <h1 className='heading'>React Assessment</h1>
       <h3>Employee Data</h3>
       <div className="filter-container">
         <input
