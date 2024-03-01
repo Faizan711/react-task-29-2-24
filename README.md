@@ -3,6 +3,11 @@ React Assessment
 
 This is a React application created as part of an assessment for a React developer role. The application fetches employee data from a Firebase Realtime Database, displays it in a table format, and includes additional features such as search functionality and a dropdown menu to select the number of rows to display.
 
+Live Demo
+------------
+
+Checkout here : [App](https://react-task-1-bf861.web.app)
+
 Installation
 ------------
 
