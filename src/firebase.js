@@ -15,9 +15,10 @@ const firebaseConfig = {
   appId: "1:167971640321:web:deec7add582321e6d35c00",
 };
 
-// Initialize Firebase
+// variable to store Firebase App
 let firebaseApp;
 
+//check to get number of Apps initialized
 if (!getApps().length) {
   firebaseApp = initializeApp(firebaseConfig);
 } else {
