@@ -1,12 +1,23 @@
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  background-color: #e8faff;
+}
+
+.heading{
+  text-align: center;
+}
 table {
   width: 100%;
-  border-collapse: collapse;
+  /* border-collapse: collapse; */
+  overflow-x: scroll;
   border-spacing: 0;
   text-align: center;
 }
 
 thead {
-  background-color: #f2f2f2;
+  background-color: rgb(39, 39, 39);
+  color: whitesmoke;
 }
 
 th, td {
